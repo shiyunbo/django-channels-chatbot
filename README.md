@@ -9,5 +9,15 @@ This project includes two apps:
 ```python
 git clone https://github.com/shiyunbo/django-channels-chatbot/
 cd myproject
-pip install requirements.txt
+pip install requirements.txts
+
+python manage.py migrate
+python manage.py runserver
+
+# windows
+Celery -A myproject worker -l info -P eventlet
+
+# Linux
+Celery -A myproject worker -l info
 ```
+Note：This project depends on redis. Please ensure it has been installed properly. 
